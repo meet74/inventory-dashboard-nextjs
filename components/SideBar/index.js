@@ -7,11 +7,12 @@ import {
   LogoIcon,
   LogoutIcon,
   ReportIcon,
-  VideosIcon,
   OrderIcon,
   SupplierIcon
 } from "../../assets/icons";
 
+
+// List of labels and icons of Side Bar
 const menuItems = [
   { id: 1, label: "Dashboard", icon: HomeIcon, link: "/" },
   { id: 2, label: "Inventory", icon: InventoryIcon, link: "/inventory" },
@@ -21,7 +22,11 @@ const menuItems = [
   { id: 4, label: "Manage Store", icon: ManageStore, link: "/managestore" },
 ];
 
+
+
 const Sidebar = () => {
+
+  // Main Styles of Side Bar
   const wrapperClasses = classNames(
     "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col bg-white border-r-2"
   );

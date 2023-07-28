@@ -6,11 +6,13 @@ import { useState, useEffect } from "react";
 function HomePage() {
   const [tableData, settableData] = useState([]);
 
+  
   useEffect(() => {
     loadData();
   }, []);
   console.log(tableData);
 
+  // Fetching data from elasticsearch
   const loadData = () => {
     console.log("shriji");
     fetch("http://localhost:3000/api/search", { method: "GET" })
@@ -29,6 +31,7 @@ function HomePage() {
       });
   };
 
+  //checking stock and changing color of avaibilty text according to quantity
   const checkStock = (quantity) => {
     if (quantity === 0) {
       return "Out of Stock";

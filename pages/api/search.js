@@ -2,9 +2,12 @@ import { connectToElasticsearch } from "../../lib/elasticsearch";
 
 export default async function search(req, res) {
   try {
+
+    //Connecting to Elastic Search
     const client = await connectToElasticsearch();
     console.log("Connected to Elasticsearch");
-    console.log("Shreehari");
+
+    // Fetching data from index
     const body = await client.search({
       index: "sample",
       body: {
