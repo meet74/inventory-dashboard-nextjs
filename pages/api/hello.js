@@ -1,5 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { connectToElasticsearch } from "../../lib/elasticsearch"
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
-}
+export default async function hello(req, res) {
+    const client = await connectToElasticsearch()
+    const { body } = await client.info()
+    res.status(200).json({body})
+    
+  }

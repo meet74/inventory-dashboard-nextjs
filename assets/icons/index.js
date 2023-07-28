@@ -1,0 +1,9 @@
+export { default as InventoryIcon } from "./InventoryIcon";
+export { default as HomeIcon } from "./HomeIcon";
+export { default as ReportIcon } from "./ReportIcon";
+export { default as SupplierIcon } from "./SupplierIcon";
+export { default as CollapsIcon } from "./CollapsIcon";
+export { default as LogoIcon } from "./Logo";
+export { default as LogoutIcon } from "./LogoutIcon";
+export { default as OrderIcon } from "./OrderIcon";
+export { default as ManageStore } from "./ManageStore";
